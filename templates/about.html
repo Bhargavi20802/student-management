@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>About | Student Management System</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  <style>
+    body {
+      background-color: #f4f9ff;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .container {
+      max-width: 800px;
+      margin-top: 50px;
+      background-color: white;
+      padding: 40px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .navbar {
+      margin-bottom: 30px;
+    }
+    h2 {
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+    p {
+      line-height: 1.7;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="/">Student Manager</a>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="/add">Add Student</a></li>
+        <li class="nav-item"><a class="nav-link" href="/search">Search</a></li>
+        <li class="nav-item active"><a class="nav-link" href="/about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- About Section -->
+  <div class="container">
+    <h2>About This Project</h2>
+    <p>
+      This Student Management System is a web-based application built using <strong>Flask, HTML, CSS, and SQLite</strong>.
+      It allows users to manage student records efficiently, including adding, editing, deleting, searching, and viewing student details.
+    </p>
+
+    <p>
+      The goal of this project is to demonstrate a practical implementation of CRUD operations with user-friendly navigation and a simple UI.
+      It's ideal for learning full-stack development with Python and Flask.
+    </p>
+
+    <p>
+      <strong>Features:</strong>
+      <ul>
+        <li>Add, update, delete, and search student records</li>
+        <li>Clean and responsive Bootstrap-based UI</li>
+        <li>SQLite as the database for simplicity</li>
+        <li>Navigation structure and reusable components</li>
+      </ul>
+    </p>
+
+    <p>
+      Developed by: <strong>Your Name or Team</strong><br/>
+      Contact: <a href="/contact">Get in Touch</a>
+    </p>
+  </div>
+
+</body>
+</html>

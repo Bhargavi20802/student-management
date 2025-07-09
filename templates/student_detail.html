@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Student Details | Student Management System</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+  <style>
+    body {
+      background-color: #f5f8fc;
+      font-family: 'Segoe UI', sans-serif;
+    }
+    .container {
+      max-width: 600px;
+      margin-top: 50px;
+      background-color: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .navbar {
+      margin-bottom: 30px;
+    }
+    h2 {
+      font-weight: 600;
+      margin-bottom: 30px;
+    }
+    .detail-item {
+      margin-bottom: 15px;
+    }
+    .label {
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="/">Student Manager</a>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav mr-auto">
+        <li class="nav-item"><a class="nav-link" href="/">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="/add">Add Student</a></li>
+        <li class="nav-item"><a class="nav-link" href="/search">Search</a></li>
+        <li class="nav-item"><a class="nav-link" href="/about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Student Detail -->
+  <div class="container">
+    <h2>Student Details</h2>
+
+    {% if student %}
+    <div class="detail-item">
+      <span class="label">Full Name:</span> {{ student[1] }}
+    </div>
+    <div class="detail-item">
+      <span class="label">Age:</span> {{ student[2] }}
+    </div>
+    <div class="detail-item">
+      <span class="label">Email:</span> {{ student[3] }}
+    </div>
+    <div class="detail-item">
+      <span class="label">Course:</span> {{ student[4] }}
+    </div>
+
+    <a href="/edit/{{ student[0] }}" class="btn btn-info">Edit</a>
+    <a href="/delete/{{ student[0] }}" class="btn btn-danger ml-2" onclick="return confirm('Are you sure you want to delete this student?');">Delete</a>
+    <a href="/" class="btn btn-secondary ml-2">Back to List</a>
+    {% else %}
+    <p class="text-danger">Student not found.</p>
+    <a href="/" class="btn btn-secondary">Back to Home</a>
+    {% endif %}
+  </div>
+
+</body>
+</html>
